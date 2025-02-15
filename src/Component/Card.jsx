@@ -73,21 +73,25 @@ const Card = memo(() => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-2xl transform transition-all hover:scale-105">
-        <div className="p-8">
-          {renderUserDetails()}
+    <>
+      <div className="fixed top-0 left-0 right-0 h-2 bg-blue-500 z-50"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-blue-200">
+        <div className="w-full max-w-md bg-white rounded-xl shadow-2xl transform transition-all hover:scale-105">
+          <div className="p-8">
+            {renderUserDetails()}
+          </div>
+          <button 
+            className={`w-full p-4 bg-blue-500 text-white font-semibold transition-colors duration-300 rounded-b-xl
+              ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'}`}
+            onClick={loadRandomUser}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Loading...' : 'Get Random User'}
+          </button>
         </div>
-        <button 
-          className={`w-full p-4 bg-blue-500 text-white font-semibold transition-colors duration-300 rounded-b-xl
-            ${isLoading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'}`}
-          onClick={loadRandomUser}
-          disabled={isLoading}
-        >
-          {isLoading ? 'Loading...' : 'Get Random User'}
-        </button>
       </div>
-    </div>
+      <div className="fixed bottom-0 left-0 right-0 h-2 bg-blue-500 z-50"></div>
+    </>
   );
 });
 
