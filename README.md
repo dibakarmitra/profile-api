@@ -20,8 +20,8 @@ This is a React-based web application for managing and displaying user profiles.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/dibakarmitra/ProfileAPI.git
-cd ProfileAPI
+git clone https://github.com/dibakarmitra/profile-api.git
+cd profile-api
 ```
 
 2. Install dependencies:
@@ -62,6 +62,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Dibakar Mitra - mitaradibakar@outlook.com
+Dibakar Mitra - dibakarmitra07@gmail.com
 
-Project Link: [https://github.com/dibakarmitra/ProfileAPI](https://github.com/dibakarmitra/ProfileAPI)
+Project Link: [https://github.com/dibakarmitra/ProfileAPI](https://github.com/dibakarmitra/profile-api)
