@@ -64,4 +64,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Dibakar Mitra - dibakarmitra07@gmail.com
 
-Project Link: [https://github.com/dibakarmitra/ProfileAPI](https://github.com/dibakarmitra/profile-api)
+Project Link: [ProfileAPI](https://profile-api-tau.vercel.app)
