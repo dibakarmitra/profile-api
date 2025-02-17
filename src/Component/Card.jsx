@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, memo } from 'react';
-import { FaMapMarkerAlt, FaEnvelope, FaSync } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaSync, FaGlobe, FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa';
 import { fetchRandomUser } from '../Services/userService';
 import { handleError } from '../Utils/errorHandler';
 
@@ -67,6 +67,20 @@ const Card = memo(() => {
             <FaMapMarkerAlt className="mr-2 text-blue-500" />
             {details.location.city}, {details.location.country}
           </p>
+          <div className="flex justify-center space-x-4 mt-4">
+            <a href={`https://linkedin.com/in/${details.login.username}`} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              <FaLinkedin className="text-2xl" />
+            </a>
+            <a href={`https://twitter.com/${details.login.username}`} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600">
+              <FaTwitter className="text-2xl" />
+            </a>
+            <a href={`https://github.com/${details.login.username}`} target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-gray-600">
+              <FaGithub className="text-2xl" />
+            </a>
+            <a href={details.website || '#'} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800">
+              <FaGlobe className="text-2xl" />
+            </a>
+          </div>
         </div>
       </div>
     );
